@@ -1,0 +1,96 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+    </style>
+</head>
+<body>
+
+   <div class="container">
+  <div class="column">
+    <img src="product-2.jpg" alt="Image 1">
+    <p>Alaran Testing Image1</p>
+  </div>
+  <div class="column">
+    <img src="product-3.jpg" alt="Image 2">
+    <p>Maleek Testing Image2</p>
+  </div>
+  <div class="column">
+    <img src="product-4.jpg" alt="Image 3">
+    <p>Daniel Testing Image3</p>
+  </div>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <style>
+      .container{
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+      }
+      .product__item{
+        flex:1;
+      }
+    </style>
+<body>
+
+  <div class="container">
+    <div class="product__item" onclick="openModal('img/product-2.jpg', 'Product 1')">
+      <div class="product__item__pic set-bg" style="background-image: url('product-2.jpg');  height:200px;background-position: center center;background-size: cover;width: 100%;"></div>
+      <div class="product__item__text">
+        <h6>Product 1</h6>
+      </div>
+    </div>
+    <div class="product__item" onclick="openModal('img/product-3.jpg', 'Product 2')">
+      <div class="product__item__pic set-bg" style="background-image: url('product-3.jpg');  height:200px;background-position: center center;background-size: cover;width: 100%;"></div>
+      <div class="product__item__text">
+        <h6>Product 2</h6>
+      </div>
+    </div>
+    <div class="product__item" onclick="openModal('img/product-4.jpg', 'Product 3')">
+      <div class="product__item__pic set-bg" style="background-image: url('product-4.jpg');
+      height:200px;background-position: center center;background-size: cover;width: 100%;"></div>
+      <div class="product__item__text">
+        <h6>Product 3</h6>
+      </div>
+    </div>
+  </div>
+  
+  <div id="modal" class="modal">
+    <div class="modal__content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modalImage" src="" alt="Product Image">
+      <div id="modalCaption"></div>
+    </div>
+  </div>
+  
+  
+
+  
+  <script src="app.js"></script>
+</body>
+</html>
+  
